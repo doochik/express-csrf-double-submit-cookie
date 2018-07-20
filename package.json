@@ -1,0 +1,38 @@
+{
+  "name": "express-csrf-double-cookie-submit",
+  "version": "1.0.0",
+  "description": "Express CSRF token middleware with \"Double cookie submit\" ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:lint && npm run test:unit",
+    "test:lint": "eslint .",
+    "test:unit": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doochik/express-csrf-double-cookie-submit.git"
+  },
+  "keywords": [
+    "express",
+    "csrf"
+  ],
+  "author": "Aleksei Androsov <doochik@ya.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/doochik/express-csrf-double-cookie-submit/issues"
+  },
+  "homepage": "https://github.com/doochik/express-csrf-double-cookie-submit#readme",
+  "devDependencies": {
+    "cookie-parser": "^1.4.3",
+    "eslint": "^5.1.0",
+    "express": "^4.0.0",
+    "jest": "^23.4.1",
+    "supertest": "^3.1.0"
+  },
+  "peerDependencies": {
+    "express": "^4.0.0"
+  },
+  "dependencies": {
+    "http-errors": "^1.6.3"
+  }
+}
