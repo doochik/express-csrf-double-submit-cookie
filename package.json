@@ -4,6 +4,8 @@
   "description": "Express CSRF token middleware with \"Double submit cookie\" ",
   "main": "index.js",
   "scripts": {
+    "precommit": "npm test",
+    "prepush": "npm test",
     "test": "npm run test:lint && npm run test:unit",
     "test:lint": "eslint .",
     "test:unit": "jest"
@@ -26,6 +28,7 @@
     "cookie-parser": "^1.4.3",
     "eslint": "^5.1.0",
     "express": "^4.0.0",
+    "husky": "^0.14.3",
     "jest": "^23.4.1",
     "supertest": "^3.1.0"
   },
