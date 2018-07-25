@@ -25,11 +25,11 @@ const csrfProtection = csrfDSC();
 const app = express();
 app.use(cookieParser());
 
-// middleware to cookie token 
+// middleware to set cookie token 
 app.use(csrfProtection)
 
 // protect /api
-app.post('/api', csrfProtection, function (req, res) {
+app.post('/api', csrfProtection.validate, function (req, res) {
   res.status(200).end();
 })
 
