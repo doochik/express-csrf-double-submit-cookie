@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/doochik/express-csrf-double-submit-cookie.svg?branch=master)](https://travis-ci.org/doochik/express-csrf-double-submit-cookie)
-
 # express-csrf-double-submit-cookie
 
 Express CSRF token middleware with ["Double submit cookie"](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet#Double_Submit_Cookie)
