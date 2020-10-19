@@ -30,6 +30,7 @@ module.exports = (options = {}) => {
     const middleware = (req, res, next) => {
         if (!req.cookies[cookieOptions.name]) {
             const csrfToken = crypto.randomBytes(options.length).toString('hex');
+            req.cookies[cookieOptions.name] = csrfToken;
             res.cookie(cookieOptions.name, csrfToken, cookieOptions);
         }
 
