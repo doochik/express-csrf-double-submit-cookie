@@ -4,16 +4,16 @@ on: pull_request
 
 jobs:
   build:
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ '12', '14' ]
-    name: node.js v${{ matrix.node }}
+        node-version: [12.x, 14.x, 16.x]
+    
     steps:
       - uses: actions/checkout@v2
-      - name: Setup node
+      - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node }}
+          node-version: ${{ matrix.node-version }}
       - run: npm ci
       - run: npm test
