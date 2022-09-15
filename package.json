@@ -19,6 +19,9 @@
   ],
   "author": "Aleksei Androsov <doochik@ya.ru>",
   "license": "MIT",
+  "files": [
+    "index.js"
+  ],
   "bugs": {
     "url": "https://github.com/doochik/express-csrf-double-submit-cookie/issues"
   },
