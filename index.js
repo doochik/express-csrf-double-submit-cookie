@@ -61,7 +61,7 @@ module.exports = (options = {}) => {
  * @return {string}
  */
 function defaultValue (req) {
-    return (req.body && req.body._csrf_token) ||
-        (req.query && req.query._csrf_token) ||
-        (req.headers['x-csrf-token']);
+    return (req.headers['x-csrf-token']) ||
+        (req.body && req.body._csrf_token) ||
+        (req.query && req.query._csrf_token);
 }
