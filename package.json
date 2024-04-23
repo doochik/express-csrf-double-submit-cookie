@@ -4,10 +4,8 @@
   "description": "Express CSRF token middleware with \"Double submit cookie\" ",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test:lint && npm run test:unit",
-    "test:lint": "eslint .",
-    "test:unit": "jest",
-    "prepare": "husky install"
+    "test": "jest",
+    "eslint": "eslint ."
   },
   "repository": {
     "type": "git",
