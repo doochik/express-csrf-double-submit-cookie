@@ -1,10 +1,8 @@
-'use strict';
-
-const cookieParser = require('cookie-parser');
-const express = require('express');
-const request = require('supertest');
-
-const csrfMiddleware = require('..');
+import cookieParser from 'cookie-parser';
+import express from 'express';
+import request from 'supertest';
+import csrfMiddleware from '..';
+import { beforeEach, describe, it } from 'vitest';
 
 let app;
 beforeEach(() => {
