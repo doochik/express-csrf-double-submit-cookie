@@ -4,7 +4,7 @@
   "description": "Express CSRF token middleware with \"Double submit cookie\" ",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "vitest",
     "eslint": "eslint ."
   },
   "repository": {
