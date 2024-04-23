@@ -26,11 +26,10 @@
   "homepage": "https://github.com/doochik/express-csrf-double-submit-cookie#readme",
   "devDependencies": {
     "cookie-parser": "^1.4.6",
-    "eslint": "^8.23.1",
+    "eslint": "^8.57.0",
     "express": "^4.19.2",
-    "husky": "^8.0.1",
-    "jest": "^29.0.3",
-    "supertest": "^6.2.4"
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
   },
   "peerDependencies": {
     "express": "^4.0.0"
