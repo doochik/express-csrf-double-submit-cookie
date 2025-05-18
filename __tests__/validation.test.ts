@@ -1,12 +1,12 @@
 import cookieParser from 'cookie-parser';
-import express from 'express';
+import express, { type Express } from 'express';
 import request from 'supertest';
-import csrfMiddleware from '..';
+import { createMiddleware } from '../src';
 import { beforeEach, describe, it } from 'vitest';
 
-let app;
+let app: Express;
 beforeEach(() => {
-    const middleware = csrfMiddleware();
+    const middleware = createMiddleware();
 
     app = express()
         .use(cookieParser())
@@ -42,8 +42,8 @@ it('should return 200 if token is valid', () => {
 
 describe('custom value function', () => {
     beforeEach(() => {
-        const middleware = csrfMiddleware({
-            value: (req) => req.headers['token'],
+        const middleware = createMiddleware({
+            value: (req) => String(req.headers['token']),
         });
 
         app = express()
