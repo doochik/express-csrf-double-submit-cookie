@@ -1,14 +1,14 @@
 import cookieParser from 'cookie-parser';
-import express from 'express';
+import express, { type Express } from 'express';
 import request from 'supertest';
-import csrfMiddleware from '..';
+import { createMiddleware } from '../src';
 import { beforeEach, expect, it } from 'vitest';
 
-let app;
+let app: Express;
 beforeEach(() => {
     app = express()
         .use(cookieParser())
-        .use(csrfMiddleware())
+        .use(createMiddleware())
         .get('/', function (req, res) {
             res.status(200).json(req.cookies);
         });
@@ -60,7 +60,7 @@ it('should not create new cookie if exists', () => {
 it('should apply cookie options', () => {
     const app = express()
         .use(cookieParser())
-        .use(csrfMiddleware({ cookie: { domain: '.example.com' } }))
+        .use(createMiddleware({ cookie: { domain: '.example.com' } }))
         .get('/', function (req, res) {
             res.status(200).end();
         });

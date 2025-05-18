@@ -1,6 +1,6 @@
 # express-csrf-double-submit-cookie
 
-Express CSRF token middleware with ["Double submit cookie"](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)_Prevention_Cheat_Sheet#Double_Submit_Cookie)
+Express CSRF token middleware with ["Naive Double-Submit Cookie Pattern"](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html#naive-double-submit-cookie-pattern-discouraged)
 
 Requires [cookie-parser](https://www.npmjs.com/package/cookie-parser) to be initialized first.
 
@@ -13,9 +13,9 @@ $ npm install express-csrf-double-submit-cookie
 ## Usage
 
 ```js
-const cookieParser = require('cookie-parser')
-const csrfDSC = require('express-csrf-double-submit-cookie')
-const express = require('express')
+import cookieParser from 'cookie-parser';
+import csrfDSC from 'express-csrf-double-submit-cookie';
+import express from 'express';
 
 // create middleware
 const csrfProtection = csrfDSC();
@@ -36,8 +36,9 @@ app.post('/api', csrfProtection.validate, function (req, res) {
 ## API
 
 ```js
-const csrfDSC = require('express-csrf-double-submit-cookie')
-const csrfProtection = csrfDSC([options]);
+import csrfDSC from 'express-csrf-double-submit-cookie';
+
+const  csrfProtection = csrfDSC([options]);
 ```
 
 ### Options
